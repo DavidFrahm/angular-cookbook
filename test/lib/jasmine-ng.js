@@ -51,7 +51,7 @@ var jasmineNG = {
        });
     },
 
-    createPromiseReturningSpy: function(q, retval) {
+    createPromiseResolvingSpy: function(q, retval) {
         return jasmine.createSpy().andCallFake(function() {
             var deferred = q.defer();
             deferred.resolve(retval);
@@ -67,7 +67,7 @@ var jasmineNG = {
         });
     },
 
-    createResourcePromiseReturningSpy: function(q, retval) {
+    createResourcePromiseResolvingSpy: function(q, retval) {
         return jasmine.createSpy().andCallFake(function() {
             var deferred = q.defer();
             deferred.resolve(retval);
