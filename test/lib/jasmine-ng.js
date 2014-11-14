@@ -37,7 +37,7 @@ var jasmineNG = {
        return spyOn(source, target).andCallFake(function() {
            var deferred = q.defer();
            deferred.resolve(retval);
-           return resolve.promise;
+           return deferred.promise;
        });
     },
 
